@@ -1,0 +1,51 @@
+ Python-specific ignores
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+output/
+
+# macOS-specific ignores
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Virtual environment
+*.env
+
+# IDE-specific ignores
+.vscode/
+.idea/
+*.iml
+
+# Ignore compiled Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+*.cover
+*.py,cover
+.coverage.*
+
+# Ignore test results
+*.pytest_cache/
+.tox/
+.nox/
+
+# Ignore build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/

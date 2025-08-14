@@ -1,0 +1,12 @@
+python-dotenv
+yfinance
+openpyxl
+openai-agents
+asyncio 
+nest_asyncio
+transformers
+scipy
+tensorflow
+torch
+tf-keras
+markdown-pdf
