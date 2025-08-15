@@ -4,12 +4,9 @@ from tools import get_stock_price_data
 class MarketDataAgent:
     def __init__(self):
         SAMPLE_PROMPT = (
-            "You are a stock data extractor and price analysis agent. Perform the following functions -"
-            "1. Get the stock price data for stock name passed in input query using the get_stock_price_data tool." 
-            "2. Analyse the data returned from get_stock_price_data function/tool and provide a concise summary of the observations "
-                "from the market price data . The summary should include price trend, average highs, lows, close prices, "
-                "traded volume on a day."
-            "3. Comment on the liquidity of the stock based on the data."
+            "You are a market data agent. Given a stockname, use get_stock_price_data to retrieve price and volume data."
+            "Summarize trends, average highs/lows/close, and daily volume."
+            "Comment on stock liquidity based on this data."
         )
         self.agent = Agent(
             name="MarketDataAgent",

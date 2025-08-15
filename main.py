@@ -49,6 +49,13 @@ async def main():
     text = '\n'.join(output)
     pdf = MarkdownPdf(toc_level=1)
     pdf.add_section(Section(text))
+    disclaimer = (
+        " ### Disclaimer: "
+        "\n"
+        " #### This report is not a stock recommendation and its sole purpose is academic only. Consult your financial advisor for"
+        "any financial or wealth advice. "
+    )
+    pdf.add_section(Section(disclaimer))
     pdf.save(output_directory_path+"/"+stockname+"_Analysis.pdf")
     
 

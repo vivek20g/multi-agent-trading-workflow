@@ -47,16 +47,12 @@ class PortfolioTradingManager:
             followed by a group of agents (tech, fundamental, sentiment) running in parallel.
         """
         PROMPT = (
-                "You are a meta agent coordinating multiple agents, and so you should show outputs according to the instructions"
-                " in each agent. Follow the instructions for processing as following,"
-                "1. You are given multiple stock analysis recommendations for the stock "+self.stockname+" from multiple agents,"
-                " which are individually based on technical indicators such as RSI, MACD, EMA etc. "
-                ",fundamental factors such as PE ratio, PEG ratio, sales and profit growth over last 5 years, "
-                " macroeconomic indicators such as real GDP growth rate, inflation rate etc."
-                " 2. You are also provided sentiment analysis based on the recent news articles concerning the stock "+self.stockname+" ."
-                " 3. Combine these individual recommendations into a detailed & rationalized summary of the stock analysis."
-                " 4. Recommend a consolidated buy or sell signal for the stock "+self.stockname+" with reasons for your recommendation."
-                
+            "You are a meta agent. Given a "+self.stockname+", consolidate buy/sell signals and rationale from:"
+
+            "TechnicalAnalysisAgent (RSI, MACD, EMA, etc.)"
+            "FundamentalAnalysisAgent (PE, PEG, growth, macro indicators)"
+            "SentimentAnalysisAgent (news sentiment, bullish ratio, trend)"
+            "Combine all inputs into a detailed summary and recommend a final buy or sell with reasoning."
         )
         
         meta_agent = Agent(
